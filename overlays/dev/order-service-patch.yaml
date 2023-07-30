@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: interface-order
+  annotations:
+    alb.ingress.kubernetes.io/healthcheck-path: "/api/order"
+  labels:
+    env: order
+spec:
+  selector:
+    app: interface-order

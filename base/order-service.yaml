@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: interface-order
+  annotations:
+    alb.ingress.kubernetes.io/healthcheck-path: "/api/order"
+spec:
+  selector:
+    app: interface-order
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 9001
+      protocol: TCP

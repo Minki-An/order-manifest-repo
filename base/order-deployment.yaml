@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: interface-order
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: interface-order
+  template:
+    metadata:
+      labels:
+        app: interface-order
+    spec:
+      containers:
+        - name: interface-order
+          image: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/order-app:8dcfdf0a
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9001

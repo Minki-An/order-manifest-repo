@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: interface-order
+  namespace: default
+  labels:
+    env: order
+spec:
+  selector:
+    matchLabels:
+      app: interface-order
+  template:
+    metadata:
+      labels:
+        app: interface-order

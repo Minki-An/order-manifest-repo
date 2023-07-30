@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/order-app
+  newName: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/order-app
+  newTag: e437f04c
+resources:
+- ../../base
+patchesStrategicMerge:
+- order-deployment-patch.yaml
+- order-service-patch.yaml

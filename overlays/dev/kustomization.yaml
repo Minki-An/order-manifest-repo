@@ -3,9 +3,8 @@ kind: Kustomization
 images:
 - name: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/order-app
   newName: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/order-app
-  newTag: e437f04c
+  newTag: ad2e8636
 resources:
 - ../../base
 patchesStrategicMerge:
 - order-deployment-patch.yaml
-

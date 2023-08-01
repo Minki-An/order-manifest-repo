@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/order-app
   newName: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/order-app
-  newTag: ad2e8636
+  newTag: 75c2b7f5
 resources:
 - ../../base
 patchesStrategicMerge:
